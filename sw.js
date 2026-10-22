@@ -1,5 +1,5 @@
 // 앱 화면과 표본 음원을 저장해 두고, 새 버전이 있으면 바로 바꿔요
-const V = "yj-speak-v2";
+const V = "yj-speak-v3";
 self.addEventListener("install", e => { self.skipWaiting(); e.waitUntil(caches.open(V).then(c => c.addAll(["./", "index.html", "cat1.webp", "cat2.webp", "cat3.webp", "cat4.webp", "cat5.webp", "icon-192.png"]))); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", e => {

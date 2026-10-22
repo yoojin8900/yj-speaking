@@ -206,7 +206,6 @@ input,select{font:inherit;color:var(--ink);background:var(--surface);border:1px 
 <script>
 /* ===== 데이터 ===== */
 const HOSTED=true;
-const CLASS_CODE="yj2026";
 const SCRIPTS = {"1": {"intro": "Hello, *Ev*eryone! // My name is (이름). I'm in Grade One. //", "blocks": [{"name": "날씨", "text": "*To*day is a *beau*tiful autumn day. // The *sky* is *blue*. // The *sun* is *warm*. ///"}, {"name": "나뭇잎", "text": "*Look* at the *trees*! // I see *red* leaves. / I see *yel*low leaves. // A *lit*tle leaf / falls *down*. // *Down*, / *down*, / *down*!↘ // I *pick* it *up*. // It is *small* / and *pret*ty. ///"}, {"name": "바람", "text": "The *wind* blows. // *Whoosh*, / *whoosh*! // The leaves *dance*. // *I* dance, *too*! ///"}, {"name": "마음", "text": "I *smile*! // I feel *hap*py. // I *love* autumn. /// What a *won*derful day! /// Thank you!"}]}, "2": {"intro": "Hello, *Ev*eryone! // My name is (이름). I'm in Grade Two. //", "blocks": [{"name": "공원", "text": "My *friends* and I / are at the *park* today. // The *air* is *cool*, / and the *trees* are *col*orful. // We play a *leaf* game. ///"}, {"name": "나뭇잎 찾기", "text": "\"*Find* a *red* leaf!\" / says my friend. // I look *here*. / I look *there*. // I *find* one / under a *tree*. // My friend finds a *yel*low leaf. ///"}, {"name": "바람", "text": "*Then* / the *wind* blows. // Our leaves fly a*way*! // We *run* after them. ///"}, {"name": "마음", "text": "We sit to*geth*er / and eat our *snacks*. // I *like* autumn. // I like my *friends* / even *more*. /// What a *won*derful autumn day! /// Thank you!"}]}, "3": {"intro": "Hello, *Ev*eryone! // My name is (이름). I'm in Grade Three. //", "blocks": [{"name": "도입", "text": "*To*day, / our *class* goes to the *park*. // The *sky* is *clear*, / and the *leaves* are *beau*tiful. // I see a *new* student / standing a*lone*. ///"}, {"name": "고민", "text": "I *want* to say hello, / but I feel *very shy*. /// *Then* / I find a *bright red* leaf / on the ground. // \"*Look*! // This leaf looks like a *heart*,\" / I say. //"}, {"name": "새 친구", "text": "The student *smiles* / and picks up a *yel*low leaf. // \"*Mine* looks like a *star*!\" / my new *friend* says. // We walk to*geth*er / and talk about our *fa*vorite *col*ors. // *Soon*, / we are *laugh*ing / and *play*ing together. ///"}, {"name": "메시지", "text": "Now I *know* / something im*por*tant. // A *small* hello / can make someone feel *wel*come. /// That is *my* wonderful autumn day! /// Thank you!"}]}, "4": {"intro": "Hello, *Ev*eryone! // My name is (이름). I'm in Grade Four. //", "blocks": [{"name": "도입", "text": "Last *Sat*urday, / my *fam*ily planned a *pic*nic / at the park. // I packed *sand*wiches↗ / *ap*ples↗ / and a *big blan*ket↘ // The *sun* was shining *bright*ly / when we left home. ///"}, {"name": "갑자기 비", "text": "But *then*, / *dark gray* clouds / covered the sky. // *Sud*denly, / it started to rain / *very hard*. // \"*Oh, no*!\" / I said. / \"Our picnic is *o*ver!\" ///"}, {"name": "동생의 생각", "text": "We *ran* to a small *shel*ter / and *wait*ed. // I felt *sad* / because I wanted to play out*side*. // My *lit*tle *broth*er / looked at our *lunch* / and *smiled*. // \"*Why* don't we eat *here*?↗\" / he asked. ///"}, {"name": "메시지", "text": "*So* / we spread our *blan*ket↗ / *shared* our food↗ / and told *fun*ny *sto*ries↘ // When the rain *stopped*, / the leaves looked *bright* and *clean*. // I smiled, *too*. /// Our picnic was *not per*fect, / but we had a *great* time to*geth*er. /// That was a *won*derful autumn day! /// Thank you!"}]}, "5": {"intro": "Hello, *every*one! // My name is (이름). I'm in Grade Five. //", "blocks": [{"name": "도입", "text": "I *always* thought / a *won*derful autumn day / needed something ex*cit*ing. // I imagined a *big* trip↗ / a *fun* festival↗ / or a *per*fect photo / under *gol*den trees↘ // But *one* afternoon, / I *changed* my mind. ///"}, {"name": "사건", "text": "I was walking *home* from school / when I saw a *young*er student / at the *bus* stop. // The student was looking at a *map* / and seemed *wor*ried. // \"Are you o*kay*?↗\" / I asked. // The student looked *up* at me. // \"I *don't* know / *which* bus to take,\" / the student said. //"}, {"name": "해결", "text": "I didn't know the answer, *ei*ther. // So we looked at the map to*geth*er / and checked the *bus* number. // When the *right* bus arrived, / the student gave me a *smile*. // \"*Thank* you for helping me!\" ///"}, {"name": "마무리", "text": "On my way home, / I noticed *bright or*ange leaves↗ / felt the *cool* air↗ / and heard my *foot*steps on the ground↘ // I didn't go *any*where exciting. / I didn't take a *pho*to. // But I felt *real*ly *warm* inside. /// That day, / I learned that we don't *al*ways have to *find* a wonderful moment. // *Some*times, / we can *make* one / by *help*ing someone. /// Thank you!"}]}, "6": {"intro": "Hello, *every*one! // My name is (이름). I'm in Grade Six. //", "blocks": [{"name": "도입", "text": "When you *think* of autumn, / what do you *see*?↘ // I see *blue* skies↗ / *col*orful leaves↗ / and *chil*dren playing outside↘ // But one autumn afternoon, / I *learned* / that a wonderful day is *not only* about what we *see*. // It can *al*so be about what we *do*. ///"}, {"name": "문제 발견", "text": "I walked through a *park* near my school. // The trees were *beau*tiful, / *but* the path was covered with *pa*per cups and *snack* bags. // I felt up*set*. // I wanted *some*one to clean the park, / but I *al*so wanted to get home *quick*ly. ///"}, {"name": "행동", "text": "*Then* / I noticed a small *yel*low leaf / next to an *emp*ty bottle. // The leaf was *so* beautiful, / and the bottle looked *so* out of place. // I *stopped*↗ / picked *up* the bottle↗ / and put it in a re*cy*cling bin↘ // I picked up *two* snack bags, *too*. // A *friend* saw me and said, / \"Can I *help*?↗\" // We worked to*geth*er for a few minutes. // The *whole* park was *not* clean, / but our *lit*tle corner looked *bet*ter. ///"}, {"name": "메시지", "text": "As we walked home, / I thought about our *small* actions. // We *can*not change *ev*erything in one day. // But we *can* / *choose* to *care*, / even when *no*body asks us to. /// That was my wonderful autumn day. // The trees were *love*ly, / but our *small choice* / made the day *mean*ingful. /// Thank you!"}]}};
 const GRADE_WORD = {1:"One",2:"Two",3:"Three",4:"Four",5:"Five",6:"Six"};
 const PART_KEYS = ["A","B","C","D"];
@@ -233,7 +232,7 @@ async function rpc(fn,args){
 }
 const Cache={roster:LS.get("yj_roster_cache",[]),att:{},all:null,recs:new Set()};
 const Store = {
-  code(){return CLASS_CODE},
+  code(){return LS.get("yj_code","")},
   setCode(c){LS.set("yj_code",c)},
   roster(){return Cache.roster},
   attempts(){return Cache.all||Object.values(Cache.att).flat()},
@@ -466,7 +465,7 @@ function toast(m){const d=document.createElement("div");d.className="toast";d.te
 function bestPart(sid,p){const a=myAttempts(sid).filter(x=>x.part===p);return{best:Math.max(0,...a.map(x=>x.res.stars)),n:a.length}}
 
 function render(){
-  const f={home:vHome,pick:vPick,student:vStudent,practice:vPractice,result:vResult,growth:vGrowth,teacher:vTeacher}[S.view]||vHome;
+  const f={code:vCode,home:vHome,pick:vPick,student:vStudent,practice:vPractice,result:vResult,growth:vGrowth,teacher:vTeacher}[S.view]||vHome;
   app.innerHTML=f();bind[S.view]&&bind[S.view]();
 }
 const bind={};
@@ -489,7 +488,7 @@ function vHome(){
       <div class="hw"><img src="${CAT(2)}" alt=""><span class="no">03</span><b>두두가 들어요</b><p>발음, 빠르기, 쉬는 곳까지 꼼꼼히 들어 줘요</p></div>
       <div class="hw"><img src="${CAT(5)}" alt=""><span class="no">04</span><b>별 모으기</b><p>칭찬 먼저, 고칠 점은 두 개까지만 알려 줘요</p></div>
     </div></section>
-    <div class="foot">YJ ENGLISH · 가을 영어 말하기 대회</div></div>`;
+    <div class="foot">YJ ENGLISH · 가을 영어 말하기 대회${HOSTED?`<br><button class="btn ghost sm" id="cc">반 코드 바꾸기</button>`:""}</div></div>`;
 }
 function vPick(){
   const R=Store.roster(),gs=[1,2,3,4,5,6].filter(g=>R.some(s=>s.grade===g)),g=S.grade;
@@ -506,6 +505,10 @@ function bindSid(){app.querySelectorAll("[data-sid]").forEach(b=>b.onclick=async
 bind.home=()=>{bindSid();const st=app.querySelector("#start");if(st)st.onclick=()=>go("pick",{grade:null});const cc=app.querySelector("#cc");if(cc)cc.onclick=()=>go("code");app.querySelector("#tch").onclick=()=>go("teacher",{auth:false})};
 bind.pick=()=>{bindSid();app.querySelector("#bk").onclick=()=>go("home");app.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{S.grade=+b.dataset.g;render()})};
 
+/* 반 코드 */
+function vCode(){return `<div class="wrap"><div class="card pin"><div class="hero"><div class="cats"><img src="${CAT(2)}" alt=""><img src="${CAT(1)}" alt="두두"><img src="${CAT(4)}" alt=""></div><div class="eyebrow">YJ ENGLISH</div><h1>말하기 연습장</h1></div>
+  <p class="muted" style="margin:0">선생님이 알려준 반 코드를 넣어 주세요</p><input id="code" autocomplete="off" autocapitalize="off" aria-label="반 코드" style="width:200px;letter-spacing:.1em" value="${esc(Store.code())}"><button class="btn primary" id="ok">들어가기</button></div></div>`}
+bind.code=()=>{const i=app.querySelector("#code"),ok=app.querySelector("#ok");const go2=async()=>{const c=i.value.trim();if(!c)return;ok.disabled=true;try{await loadRoster(c);Store.setCode(c);go("home")}catch(e){ok.disabled=false;toast(/bad_code/.test(e.message)?"반 코드가 달라요":"연결이 안 돼요. 인터넷을 확인해 주세요")}};ok.onclick=go2;i.onkeydown=e=>{if(e.key==="Enter")go2()}};
 /* 학생 홈 */
 function vStudent(){
   const s=student(S.sid);if(!s)return vHome();const g=s.grade,B=SCRIPTS[g].blocks;
@@ -792,8 +795,8 @@ function vTeacher(){
     <div class="card stack"><h3>학생 관리</h3>
       <div class="row"><input id="nn" placeholder="이름 (예: 서아)" aria-label="이름" style="flex:1;min-width:140px"><select id="ng" aria-label="학년">${[1,2,3,4,5,6].map(g=>`<option value="${g}">${g}학년</option>`).join("")}</select><button class="btn primary" id="add">추가</button></div>
       <div class="row" style="gap:6px">${R.map(s=>`<span class="chip" style="font-size:13px">${s.grade}학년 ${esc(s.name)} <button class="btn ghost sm" data-del="${s.id}" aria-label="${esc(s.name)} 삭제" style="min-height:0;padding:0 2px">✕</button></span>`).join("")}</div>
-      <div class="row"><span class="small muted">선생님 비밀번호</span><input id="np" inputmode="numeric" maxlength="8" style="width:110px" aria-label="새 비밀번호"><button class="btn sm" id="sp">바꾸기</button></div>
-      <p class="small muted" style="margin:0">학생을 지워도 지난 기록은 서버에 남아 있어요.</p>
+      <div class="row"><span class="small muted">반 코드</span><input id="ncode" style="width:140px" aria-label="반 코드" value="${esc(Cache.code||"")}"><button class="btn sm" id="scode">바꾸기</button><span class="spacer"></span><span class="small muted">선생님 비밀번호</span><input id="np" inputmode="numeric" maxlength="8" style="width:110px" aria-label="새 비밀번호"><button class="btn sm" id="sp">바꾸기</button></div>
+      <p class="small muted" style="margin:0">반 코드를 바꾸면 학생들도 새 코드를 넣어야 해요. 학생을 지워도 지난 기록은 서버에 남아 있어요.</p>
     </div>
     <div id="det"></div></div>`;
 }
@@ -805,6 +808,7 @@ bind.teacher=()=>{
   app.querySelector("#add").onclick=async()=>{const n=app.querySelector("#nn").value.trim();if(!n)return toast("이름을 넣어 주세요");try{await rpc("sp_add_student",{pin:S.pin,name:n,grade:+app.querySelector("#ng").value});re("추가했어요")}catch(e){toast("추가하지 못했어요")}};
   app.querySelectorAll("[data-del]").forEach(b=>b.onclick=async()=>{const id=b.dataset.del;if(b.dataset.sure){try{await rpc("sp_del_student",{pin:S.pin,sid:id});re("삭제했어요")}catch(e){toast("삭제하지 못했어요")}}else{b.dataset.sure="1";b.textContent="삭제?";}});
   app.querySelector("#sp").onclick=async()=>{const v=app.querySelector("#np").value.trim();if(!/^\d{4,8}$/.test(v))return toast("숫자 4자리 이상으로 넣어 주세요");try{await rpc("sp_set",{pin:S.pin,k:"teacher_pin",v});S.pin=v;toast("비밀번호를 바꿨어요")}catch(e){toast("바꾸지 못했어요")}};
+  app.querySelector("#scode").onclick=async()=>{const v=app.querySelector("#ncode").value.trim();if(v.length<4)return toast("4글자 이상으로 넣어 주세요");try{await rpc("sp_set",{pin:S.pin,k:"class_code",v});Store.setCode(v);re("반 코드를 바꿨어요")}catch(e){toast("바꾸지 못했어요")}};
   app.querySelectorAll("[data-det]").forEach(b=>b.onclick=()=>showDetail(b.dataset.det));
 };
 function showDetail(sid){
@@ -828,8 +832,9 @@ function showDetail(sid){
 }
 
 async function boot(){
+  if(!Store.code()){S.view="code";render();return}
   render();
-  try{await loadRoster(Store.code());if(S.view==="home"||S.view==="pick")render()}catch(e){toast("명단을 불러오지 못했어요. 인터넷 연결을 확인해 주세요")}
+  try{await loadRoster(Store.code());if(S.view==="home")render()}catch(e){if(/bad_code/.test(e.message)){S.view="code";render()}}
   flush();
 }
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
