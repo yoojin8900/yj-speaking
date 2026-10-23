@@ -137,6 +137,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .res .w.miss{background:var(--bad-soft);color:var(--bad);cursor:pointer;text-decoration:underline dotted}
 .res .w.close{background:var(--warn-soft);color:var(--warn);cursor:pointer}
 .res .w.miss b,.res .w.close b{color:inherit}
+.res .ok-p,.res .need-p{white-space:nowrap}
 .res .ok-p{font-size:11px;font-weight:700;color:var(--good);background:var(--good-soft);border-radius:6px;padding:1px 5px;margin:0 3px;vertical-align:2px}
 .res .need-p{font-size:11px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:1px 5px;margin:0 3px;vertical-align:2px}
 .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
@@ -173,7 +174,7 @@ h1,h2,h3{text-wrap:balance;margin:0}
 .crit .ci{display:flex;align-items:center;gap:8px;padding:11px 2px;border-bottom:1px solid var(--line)}
 .crit .ci:last-child{border-bottom:0}
 .crit .ci .nm{font-weight:600;font-size:15px;white-space:nowrap}
-@media (max-width:420px){.crit .ci{flex-wrap:wrap;row-gap:4px}.crit .ci .stars{margin-left:auto}}
+@media (max-width:420px){.crit .ci .sc{display:none}.crit .ci .stars{font-size:15px}}
 .crit .ci .stars{margin-left:auto;font-size:17px}
 .crit .ci .sc{width:42px;text-align:right;font-size:13px;color:var(--muted)}
 svg text{fill:var(--muted);font-family:var(--f-body)}
